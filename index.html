@@ -75,9 +75,12 @@ body:not(.no-humor) [data-straight]{display:none !important}
 .split.in .ch{transform:none;opacity:1}
 
 /* hero */
-#hero{display:flex;align-items:center;padding-top:22vh}
-#hero h1{font-size:clamp(46px,8.4vw,122px);max-width:900px;margin:20px 0 26px}
+#hero{display:flex;align-items:center;padding-top:16vh}
+#hero h1{font-size:clamp(42px,6.4vw,92px);max-width:820px;margin:18px 0 22px}
 #hero .lead{margin-bottom:34px}
+.tldr{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:-14px 0 30px}
+.tldr b{font:700 12px var(--mono);color:#000;background:var(--lime);padding:7px 10px;border-radius:8px}
+.tldr span{font:500 14px var(--sans);border:1px solid var(--line);background:rgba(12,12,18,.75);padding:6px 12px;border-radius:999px}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap}
 .status{display:inline-flex;gap:8px;align-items:center;font:500 13px var(--mono);color:var(--muted);border:1px solid var(--line);padding:6px 12px;border-radius:999px;background:rgba(10,10,16,.5)}
 .status i{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime);animation:pulse 1.6s infinite}
@@ -142,7 +145,7 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
 .hscroll .sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
 .hscroll .head{padding:0 6vw;margin-bottom:5vh}
 .hscroll .track{display:flex;gap:24px;padding:0 6vw;will-change:transform}
-.step{flex:0 0 min(420px,78vw);min-height:300px;border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:rgba(12,12,18,.88);display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+.step{flex:0 0 min(340px,72vw);min-height:220px;border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:rgba(12,12,18,.88);display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
 .step .n{font:700 92px/1 var(--sans);color:transparent;-webkit-text-stroke:1px #3a3a55;position:absolute;right:18px;top:12px}
 .step .lbl{font:600 12px var(--mono);color:var(--lime);letter-spacing:.1em;text-transform:uppercase}
 .step p{color:var(--muted)}
@@ -245,12 +248,9 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
   <div class="wrap">
     <span class="status reveal"><i></i> Applying for: AI Developer · <span data-company>Prime AI</span></span>
     <h1 class="split">Hi, I'm <span class="hl" data-name>Your Name</span>. I vibe code responsibly.</h1>
-    <p class="lead reveal" style="--i:2">
-      You asked for <em>“something that answers why you are a good fit for the job.”</em>
-      <span data-joke>So I did what any reasonable developer would do: I over-delivered, then removed everything fragile.</span>
-      <span data-straight>This page answers that question with my approach, my workflow, and evidence.</span>
-    </p>
-    <div class="cta-row reveal" style="--i:3">
+    <p class="lead reveal" style="--i:2"><span data-joke>You said no long letters. Respect. So here's a website you can skim in 30 seconds.</span><span data-straight>The short version:</span></p>
+    <div class="tldr reveal" style="--i:3"><b>TL;DR</b><span>7+ yrs shipping full-stack</span><span>Led a $1.5M-saving system with an AI agent</span><span>Claude Code, every diff reviewed</span></div>
+    <div class="cta-row reveal" style="--i:4">
       <a class="btn primary" href="#serious" data-cursor="skip the jokes">Take me to the serious part ↓</a>
       <a class="btn" href="#terminal" data-cursor="good choice">I'm here for the jokes</a>
     </div>
@@ -269,7 +269,7 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
     <div>
       <span class="kicker reveal">01 · How this page was made</span>
       <h2 class="split">I asked Claude to prove I'm a fit.</h2>
-      <p class="lead reveal" style="--i:1">This is a reenactment of the build session. <span data-joke>It has been dramatized. Slightly. The part where I deleted 13 npm packages is 100% real.</span></p>
+      <p class="lead reveal" style="--i:1">A reenactment of building this page. <span data-joke>Lightly dramatized.</span></p>
       <button class="replay reveal" id="replay" style="--i:2" data-cursor="again!">↻ replay session</button>
     </div>
     <div class="terminal reveal" data-r="right">
@@ -284,7 +284,7 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
   <div class="wrap">
     <span class="kicker reveal">02 · The job post, annotated</span>
     <h2 class="split">Your requirements. My receipts.</h2>
-    <p class="lead reveal" style="--i:1"><span data-joke>Front of each card: the joke. Click to flip it for the serious answer. Recruiters may skip straight to the back.</span><span data-straight>Each requirement from the posting, and how I meet it.</span></p>
+    <p class="lead reveal" style="--i:1"><span data-joke>Joke on the front, receipts on the back. Click to flip.</span><span data-straight>Each requirement, and how I meet it.</span></p>
     <div class="cards" id="cards"></div>
   </div>
 </section>
@@ -294,7 +294,7 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
   <div class="wrap">
     <span class="kicker reveal">03 · Force multiplier vs. crutch</span>
     <h2 class="split">The AI Responsibility Slider™</h2>
-    <p class="lead reveal" style="--i:1">You wrote that Claude Code should be <em>“a force multiplier rather than a crutch.”</em> Agreed. Both ends of this slider are bad. Drag it and see where I live.</p>
+    <p class="lead reveal" style="--i:1">“A force multiplier, not a crutch.” Agreed. Both ends are bad. Drag it.</p>
     <div class="meter reveal" data-r="scale" style="--i:2">
       <div class="meter-labels"><span>🩼 Crutch</span><span>✍️ Artisanal</span></div>
       <div class="range-wrap">
@@ -317,13 +317,13 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
       <h2 style="margin-bottom:0">How I ship a client feature</h2>
     </div>
     <div class="track" id="hTrack">
-      <div class="step"><span class="n">01</span><span class="lbl">Scope</span><h3>Pin down “done”</h3><p>Turn the client's request into acceptance criteria before writing a line. If “done” is unclear, I ask. One question now saves three revisions later.</p></div>
-      <div class="step"><span class="n">02</span><span class="lbl">Plan</span><h3>Plan with the AI, decide as the human</h3><p>Use Claude Code's plan mode plus a project <code>CLAUDE.md</code> with conventions. I review the plan like a PR: schema, edge cases, what <em>not</em> to build.</p></div>
-      <div class="step"><span class="n">03</span><span class="lbl">Build</span><h3>Small diffs, fast loops</h3><p>Front-end, API, and data layer in thin vertical slices. Each slice runs end-to-end before the next one starts. No 2,000-line surprise commits.</p></div>
-      <div class="step"><span class="n">04</span><span class="lbl">Review</span><h3>Read every line</h3><p>AI writes the first draft; I own the final one. I check for security holes, N+1 queries, and invented APIs. <span data-joke>Claude is great. Claude is also confident.</span></p></div>
-      <div class="step"><span class="n">05</span><span class="lbl">Test</span><h3>Prove it, don't claim it</h3><p>Tests on the logic that matters, a real run of the app, and the unhappy paths: empty states, bad input, slow network.</p></div>
-      <div class="step"><span class="n">06</span><span class="lbl">Ship</span><h3>Deploy + tell people</h3><p>CI, preview URLs, a clear changelog for the client, and a README so the next developer (or future me) isn't lost.</p></div>
-      <div class="step"><span class="n">07</span><span class="lbl">Iterate</span><h3>Feedback → fix → repeat</h3><p>Client says “can it also…?” Same loop, same day where possible. <span data-joke>My favorite sentence is “that's already deployed.”</span></p></div>
+      <div class="step"><span class="n">01</span><span class="lbl">Scope</span><h3>Pin down “done”</h3><p>Define “done” before writing code.</p></div>
+      <div class="step"><span class="n">02</span><span class="lbl">Plan</span><h3>Plan with the AI, decide as the human</h3><p>Plan mode + CLAUDE.md. I edit the plan, not just approve it.</p></div>
+      <div class="step"><span class="n">03</span><span class="lbl">Build</span><h3>Small diffs, fast loops</h3><p>Thin vertical slices: UI → API → DB, small commits.</p></div>
+      <div class="step"><span class="n">04</span><span class="lbl">Review</span><h3>Read every line</h3><p>AI drafts, I own the final version. Every line read.</p></div>
+      <div class="step"><span class="n">05</span><span class="lbl">Test</span><h3>Prove it, don't claim it</h3><p>Tests where it matters, unhappy paths included.</p></div>
+      <div class="step"><span class="n">06</span><span class="lbl">Ship</span><h3>Deploy + tell people</h3><p>CI, deploy, changelog, README.</p></div>
+      <div class="step"><span class="n">07</span><span class="lbl">Iterate</span><h3>Feedback → fix → repeat</h3><p>Client feedback → fix → ship, same day when possible.</p></div>
     </div>
   </div>
 </section>
@@ -337,34 +337,16 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
     <p class="pitch reveal" id="pitch"></p>
     <div class="track-row" id="track"></div>
 
-    <div class="pillars">
-      <div class="pillar reveal" style="--i:0"><div class="ico">🚢</div><h3>I ship end-to-end</h3>
-        <ul><li>Comfortable across front-end, backend, and the data layer</li><li>Take a scoped problem and own it: plan, build, test, ship</li><li>Deliver working software early, then iterate</li></ul></div>
-      <div class="pillar reveal" style="--i:1"><div class="ico">🧠</div><h3>I use AI with judgment</h3>
-        <ul><li>Claude Code is part of my daily workflow, not an occasional helper</li><li>I review every diff and catch hallucinated APIs and edge cases</li><li>I know when to stop prompting and write the code myself</li></ul></div>
-      <div class="pillar reveal" style="--i:2"><div class="ico">🧱</div><h3>I build things that last</h3>
-        <ul><li>Simple, boring, maintainable over clever and fragile</li><li>Clean schemas; one source of truth for client data</li><li>Production-ready means tested, observable, and documented</li></ul></div>
-      <div class="pillar reveal" style="--i:3"><div class="ico">💬</div><h3>I communicate proactively</h3>
-        <ul><li>Status updates before anyone has to ask</li><li>Write-ups the team can actually use</li><li>Comfortable with clients and fast feedback loops</li></ul></div>
-    </div>
 
     <h3 class="sub-h split">Evidence</h3>
     <div class="projects" id="projects"></div>
 
-    <h3 class="sub-h split">My Claude Code workflow</h3>
-    <div class="workflow reveal">
-      <div><b>01 · Context</b><span>CLAUDE.md with stack, conventions, commands</span></div>
-      <div><b>02 · Plan</b><span>Plan mode first; I edit the plan before code</span></div>
-      <div><b>03 · Slice</b><span>One vertical slice per session, small commits</span></div>
-      <div><b>04 · Verify</b><span>Run it, test it, read the diff</span></div>
-      <div><b>05 · Document</b><span>README, changelog, handoff notes</span></div>
-    </div>
 
-    <h3 class="sub-h split">My first 30 days at Prime AI</h3>
+    <h3 class="sub-h split">First 30 days</h3>
     <div class="plan">
-      <div class="reveal" style="--i:0"><b>Week 1</b><p>Learn your stack, client process, and conventions (Claude Code makes this fast). Ship one small real fix so I'm contributing from day one.</p></div>
-      <div class="reveal" style="--i:1"><b>Week 2</b><p>Own one client feature end-to-end with tight feedback loops and clear status updates.</p></div>
-      <div class="reveal" style="--i:2"><b>Weeks 3–4</b><p>Propose a reusable project starter (auth, schema patterns, CI, a shared CLAUDE.md) so every client build starts production-ready.</p></div>
+      <div class="reveal" style="--i:0"><b>Week 1</b><p>Learn the stack. Ship a small real fix.</p></div>
+      <div class="reveal" style="--i:1"><b>Week 2</b><p>Own one client feature end-to-end.</p></div>
+      <div class="reveal" style="--i:2"><b>Weeks 3–4</b><p>Propose a reusable, production-ready project starter.</p></div>
     </div>
   </div>
 </section>
@@ -377,9 +359,7 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
     <div class="stats">
       <div class="stat reveal" style="--i:0"><div class="num" data-count="100" data-suffix="%">0</div><p>of AI-generated code I read before it ships.</p></div>
       <div class="stat reveal" style="--i:1"><div class="num" data-count="0">0</div><p>microservices on this website. <span data-joke>Claude suggested one for the footer. I said no.</span></p></div>
-      <div class="stat reveal" style="--i:2"><div class="num" data-count="1">0</div><p>HTML file. No build step. <span data-joke>Overkill, but maintainable overkill.</span></p></div>
-      <div class="stat reveal" style="--i:3"><div class="num" data-count="24" data-suffix="h">0</div><p>target turnaround on client feedback.</p></div>
-      <div class="stat reveal" style="--i:4" data-joke><div class="num" data-count="13">0</div><p>npm packages Claude suggested that I deleted while building this page.</p></div>
+      <div class="stat reveal" style="--i:3"><div class="num" data-count="24" data-suffix="h">0</div><p>target turnaround on client feedback.</p></div><p>npm packages Claude suggested that I deleted while building this page.</p></div>
       <div class="stat reveal" style="--i:5" data-joke><div class="num" data-count="1">0</div><p>blob. It's had a long day. Please be nice to it.</p></div>
       <div class="stat reveal" style="--i:6" data-joke><div class="num" data-count="2019">0</div><p>the year I became Programmer of the Year <em>and</em> a hackathon champion. Still riding that high.</p></div>
       <div class="stat reveal" style="--i:7" data-joke><div class="num" data-count="2">0</div><p>Six Sigma-adjacent certifications. I will optimize your coffee queue whether you ask or not.</p></div>
@@ -391,14 +371,12 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
 <section id="faq" data-scene='{"x":2.3,"y":0.3,"s":0.7,"amp":0.26,"freq":1.2,"pal":2,"o":0.75}'>
   <div class="wrap">
     <span class="kicker reveal">07 · FAQ</span>
-    <h2 class="split">Questions you might have.</h2>
+    <h2 class="split">Quick questions.</h2>
     <div class="faq">
-      <details class="reveal" style="--i:0"><summary>Did AI build this website?</summary><p>With me, yes, and that's the point. Claude Code wrote much of the first draft. I set the direction, reviewed every line, cut what was fragile, and made the calls. That's the job you described, done in the open.</p></details>
-      <details class="reveal" style="--i:1"><summary>Isn't a 3D blob a bit much?</summary><p>For a job application? Probably. For client work, I default to simple and boring. The blob is a one-off. <span data-joke>It knows. It's fine with it.</span></p></details>
-      <details class="reveal" style="--i:2"><summary>How fast can you ship?</summary><p>Fast enough that clients see progress within days, not weeks. Not so fast that “working demo” gets mistaken for “production-ready.”</p></details>
-      <details class="reveal" style="--i:3"><summary>What happens when Claude is wrong?</summary><p>I catch it in review or in tests, fix it, and if it's a pattern, I add a rule to the project's CLAUDE.md so it doesn't happen again. Mistakes become guardrails.</p></details>
-      <details class="reveal" style="--i:4"><summary>Your background is mostly .NET. Can you work in our stack?</summary><p>Yes. I already ship TypeScript, and seven years of APIs, schemas, CI/CD, and debugging carry over to any stack. Claude Code also shortens ramp-up a lot: I use it to learn a new codebase's conventions fast, then I verify everything. This site is one example: three.js and WebGL shaders aren't part of my day job.</p></details>
-      <details class="reveal" style="--i:5" data-joke><summary>Why is the cursor doing that?</summary><p>Those lines are attention weights: it “attends” to whatever is clickable nearby, like a tiny transformer. Leave it idle and it waits for a prompt. Click and it commits.</p></details>
+      <details class="reveal" style="--i:0"><summary>Did AI build this?</summary><p>With me, yes. Claude drafted, I directed and reviewed every line. That's the job.</p></details>
+      <details class="reveal" style="--i:1"><summary>You're mostly .NET. Can you do our stack?</summary><p>Yes. I already ship TypeScript, and the fundamentals carry over. This site (three.js, WebGL) isn't my day job either.</p></details>
+      <details class="reveal" style="--i:2"><summary>What if Claude is wrong?</summary><p>Review and tests catch it. Repeat mistakes become rules in CLAUDE.md.</p></details>
+      <details class="reveal" style="--i:3" data-joke><summary>Why is the cursor doing that?</summary><p>Attention weights. It attends to clickable things. Idle, it waits for a prompt.</p></details>
     </div>
   </div>
 </section>
@@ -439,7 +417,7 @@ const CONFIG = {
     { label: "LinkedIn", url: "https://linkedin.com/in/heherson-amit-it" },
     { label: "Portfolio", url: "https://heherson-portfolio.vercel.app" }
   ],
-  pitch: "I'm a software engineer with <strong>7+ years shipping enterprise systems</strong> end-to-end: web, desktop, and Android, from the first stakeholder meeting to deployment and support. At Lear I led a global Chemical Management System that delivered <strong>$1.5M in savings in its first year</strong> and shipped an <strong>AI agent for reporting</strong>. I've solo-led multiple client systems, I own my team's CI/CD, and I've taught software QA. AI makes me faster. <strong>Testing, documentation, and client communication</strong> make what I ship last.",
+  pitch: "<strong>7+ years</strong> shipping enterprise software end-to-end. Led a global system with an <strong>AI reporting agent</strong> that saved <strong>$1.5M in year one</strong>. AI makes me fast; QA habits make it last.",
   track: [
     { n: "7+", l: "years shipping production software" },
     { n: "$1.5M", l: "saved in year one by a system I led" },
@@ -447,10 +425,10 @@ const CONFIG = {
     { n: "3", l: "workstreams shipped in parallel at Lear" }
   ],
   projects: [
-    { title: "Global Chemical Management System", org: "Lear Corporation", desc: "Led the build on Palantir Foundry. Automated Safety Data Sheet approval workflows for EHS, gave every site worldwide access to chemical data, standardized annual inventory declarations, and added an AI agent for reporting.", impact: "$1.5M operational savings in year one", stack: ["Palantir Foundry", "AI agent", "Workflow automation", "Azure DevOps"], url: "" },
-    { title: "HUMAN Online Recruitment", org: "Mesh Networks", desc: "Customizable recruitment platform I led end-to-end: design, build, deployment, and maintenance. Part of the HUMAN HRIS suite, which cut manual data entry for HR.", impact: "Faster hiring, better recruiter-applicant communication", stack: ["ASP.NET Core", "C#", "SQL Server"], url: "" },
-    { title: "ERP, Accounting & Inventory", org: "N-PAX Cebu", desc: "Designed and built modules for high-scale ERP systems. Planned and ran UAT, and owned full-lifecycle support for multiple client systems.", impact: "Improved performance and stability across client systems", stack: ["C#", "WinForms", "SQL Server", "UAT"], url: "" },
-    { title: "NIMS & TRICOINS", org: "Mesh Networks", desc: "Two Android apps I led solo: a national microchip inventory system for veterinarians, and a distributed data-collection app for field agents.", impact: "More accurate tracking, faster multi-agent reporting", stack: ["Android", "Java", "SQL Server"], url: "" }
+    { title: "Global Chemical Management System", org: "Lear Corporation", desc: "Automated safety-data approvals for every Lear site worldwide, plus an AI agent for reporting.", impact: "$1.5M operational savings in year one", stack: ["Palantir Foundry", "AI agent", "Workflow automation", "Azure DevOps"], url: "" },
+    { title: "HUMAN Online Recruitment", org: "Mesh Networks", desc: "Recruitment platform I led solo, from design to maintenance.", impact: "Faster hiring, better recruiter-applicant communication", stack: ["ASP.NET Core", "C#", "SQL Server"], url: "" },
+    { title: "ERP, Accounting & Inventory", org: "N-PAX Cebu", desc: "Built ERP modules, ran UAT, supported multiple client systems.", impact: "Improved performance and stability across client systems", stack: ["C#", "WinForms", "SQL Server", "UAT"], url: "" },
+    { title: "NIMS & TRICOINS", org: "Mesh Networks", desc: "Two Android apps I led solo: vet microchip inventory and field data collection.", impact: "More accurate tracking, faster multi-agent reporting", stack: ["Android", "Java", "SQL Server"], url: "" }
   ]
 };
 </script>
@@ -573,6 +551,7 @@ const TERM = [
   ["cmd", "? Proceed with plan? › yes, but keep it to one HTML file"],
   ["dim", "● Writing index.html…"],
   ["warn","  ⚠ Claude suggested 14 npm packages.\n  ✎ Human removed 13. Kept three.js for the blob."],
+  ["warn","  ⚠ Claude drafted a 3-page cover letter.\n  ✎ Human: \"they said no long letters.\" Deleted."],
   ["warn","  ⚠ Claude suggested a microservice for the footer.\n  ✎ Human said no."],
   ["dim", "● Reviewing diff… every line, with coffee ☕"],
   ["ok",  "  ✓ Works on mobile  ✓ Reduced-motion friendly  ✓ No console errors"],
