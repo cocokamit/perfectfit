@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Perfect Fit — AI Developer Application</title>
-<meta name="description" content="Why I'm a good fit for the AI Developer role at Prime AI. Serious answer included. Jokes also included." />
+<title>Heherson Amit — Perfect Fit</title>
+<meta name="description" content="Heherson Amit: why I'm a good fit for the AI Developer role at Prime AI. Serious answer included. Jokes also included." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -153,6 +153,13 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
 .serious-banner{display:flex;width:fit-content;align-items:center;gap:10px;font:600 12px var(--mono);border:1px solid #3a4a1c;color:var(--lime);background:rgba(200,255,77,.06);padding:8px 14px;border-radius:999px;margin-bottom:10px}
 .pitch{font-size:clamp(20px,2.3vw,30px);line-height:1.4;max-width:920px;margin:10px 0 56px}
 .pitch strong{color:var(--lime);font-weight:500}
+.track-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:-20px 0 48px}
+.track-row div{padding:22px;background:var(--card);border-right:1px solid var(--line)}
+.track-row div:last-child{border-right:0}
+.track-row b{display:block;font:700 clamp(32px,3.6vw,46px)/1 var(--sans);color:var(--lime);margin-bottom:8px}
+.track-row span{color:var(--muted);font-size:14px}
+@media (max-width:700px){.track-row div{border-right:0;border-bottom:1px solid var(--line)}}
+.project .org{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--violet)}
 .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
 .pillar{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--card)}
 .pillar .ico{font-size:26px;margin-bottom:10px}
@@ -328,6 +335,7 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
     <span class="kicker reveal">05 · Why I'm a good fit</span>
     <h2 class="split">The serious answer.</h2>
     <p class="pitch reveal" id="pitch"></p>
+    <div class="track-row" id="track"></div>
 
     <div class="pillars">
       <div class="pillar reveal" style="--i:0"><div class="ico">🚢</div><h3>I ship end-to-end</h3>
@@ -354,7 +362,7 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
 
     <h3 class="sub-h split">My first 30 days at Prime AI</h3>
     <div class="plan">
-      <div class="reveal" style="--i:0"><b>Week 1</b><p>Learn your stack, client process, and conventions. Ship one small real fix so I'm contributing from day one.</p></div>
+      <div class="reveal" style="--i:0"><b>Week 1</b><p>Learn your stack, client process, and conventions (Claude Code makes this fast). Ship one small real fix so I'm contributing from day one.</p></div>
       <div class="reveal" style="--i:1"><b>Week 2</b><p>Own one client feature end-to-end with tight feedback loops and clear status updates.</p></div>
       <div class="reveal" style="--i:2"><b>Weeks 3–4</b><p>Propose a reusable project starter (auth, schema patterns, CI, a shared CLAUDE.md) so every client build starts production-ready.</p></div>
     </div>
@@ -373,6 +381,8 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
       <div class="stat reveal" style="--i:3"><div class="num" data-count="24" data-suffix="h">0</div><p>target turnaround on client feedback.</p></div>
       <div class="stat reveal" style="--i:4" data-joke><div class="num" data-count="13">0</div><p>npm packages Claude suggested that I deleted while building this page.</p></div>
       <div class="stat reveal" style="--i:5" data-joke><div class="num" data-count="1">0</div><p>blob. It's had a long day. Please be nice to it.</p></div>
+      <div class="stat reveal" style="--i:6" data-joke><div class="num" data-count="2019">0</div><p>the year I became Programmer of the Year <em>and</em> a hackathon champion. Still riding that high.</p></div>
+      <div class="stat reveal" style="--i:7" data-joke><div class="num" data-count="2">0</div><p>Six Sigma-adjacent certifications. I will optimize your coffee queue whether you ask or not.</p></div>
     </div>
   </div>
 </section>
@@ -387,7 +397,8 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
       <details class="reveal" style="--i:1"><summary>Isn't a 3D blob a bit much?</summary><p>For a job application? Probably. For client work, I default to simple and boring. The blob is a one-off. <span data-joke>It knows. It's fine with it.</span></p></details>
       <details class="reveal" style="--i:2"><summary>How fast can you ship?</summary><p>Fast enough that clients see progress within days, not weeks. Not so fast that “working demo” gets mistaken for “production-ready.”</p></details>
       <details class="reveal" style="--i:3"><summary>What happens when Claude is wrong?</summary><p>I catch it in review or in tests, fix it, and if it's a pattern, I add a rule to the project's CLAUDE.md so it doesn't happen again. Mistakes become guardrails.</p></details>
-      <details class="reveal" style="--i:4" data-joke><summary>Why is the cursor doing that?</summary><p>Those lines are attention weights: it “attends” to whatever is clickable nearby, like a tiny transformer. Leave it idle and it waits for a prompt. Click and it commits.</p></details>
+      <details class="reveal" style="--i:4"><summary>Your background is mostly .NET. Can you work in our stack?</summary><p>Yes. I already ship TypeScript, and seven years of APIs, schemas, CI/CD, and debugging carry over to any stack. Claude Code also shortens ramp-up a lot: I use it to learn a new codebase's conventions fast, then I verify everything. This site is one example: three.js and WebGL shaders aren't part of my day job.</p></details>
+      <details class="reveal" style="--i:5" data-joke><summary>Why is the cursor doing that?</summary><p>Those lines are attention weights: it “attends” to whatever is clickable nearby, like a tiny transformer. Leave it idle and it waits for a prompt. Click and it commits.</p></details>
     </div>
   </div>
 </section>
@@ -410,7 +421,7 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
 </main>
 
 <footer>
-  <span>Built with Claude Code + human judgment. <span data-joke>No blobs were harmed.</span></span>
+  <span>© <span data-fullname>Heherson A. Amit</span> · Built with Claude Code + human judgment. <span data-joke>No blobs were harmed.</span></span>
   <span data-joke>Psst: <kbd>↑</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd><kbd>←</kbd><kbd>→</kbd><kbd>B</kbd><kbd>A</kbd></span>
 </footer>
 <div id="toast" role="status"></div>
@@ -420,20 +431,26 @@ kbd{font:12px var(--mono);border:1px solid var(--line);border-bottom-width:2px;p
      ===================================================================== -->
 <script>
 const CONFIG = {
-  name: "Your Name",
+  name: "Heherson",
+  fullName: "Heherson A. Amit",
   company: "Prime AI",
-  email: "you@example.com",
+  email: "", // add your email here; leave empty to hide the email button
   links: [
-    { label: "GitHub", url: "https://github.com/your-handle" },
-    { label: "LinkedIn", url: "https://linkedin.com/in/your-handle" },
-    { label: "Resume (PDF)", url: "#" }
+    { label: "LinkedIn", url: "https://linkedin.com/in/heherson-amit-it" },
+    { label: "Portfolio", url: "https://heherson-portfolio.vercel.app" }
   ],
-  // One or two sentences. Keep it specific: years, stack, what you've shipped.
-  pitch: "I'm a full-stack developer who builds with <strong>Claude Code every day</strong> and still reads every line before it ships. I've taken projects from <strong>a client's rough idea to a deployed, tested product</strong>, across front-end, backend, and data. I care about <strong>simple, maintainable software</strong> and keeping people in the loop. That's the job you described.",
+  pitch: "I'm a software engineer with <strong>7+ years shipping enterprise systems</strong> end-to-end: web, desktop, and Android, from the first stakeholder meeting to deployment and support. At Lear I led a global Chemical Management System that delivered <strong>$1.5M in savings in its first year</strong> and shipped an <strong>AI agent for reporting</strong>. I've solo-led multiple client systems, I own my team's CI/CD, and I've taught software QA. AI makes me faster. <strong>Testing, documentation, and client communication</strong> make what I ship last.",
+  track: [
+    { n: "7+", l: "years shipping production software" },
+    { n: "$1.5M", l: "saved in year one by a system I led" },
+    { n: "4", l: "client systems I led solo, end-to-end" },
+    { n: "3", l: "workstreams shipped in parallel at Lear" }
+  ],
   projects: [
-    { title: "[Project 1] Client portal", desc: "Replace with a real project: what it does and who uses it.", impact: "e.g. Cut reporting time from 3h to 10min", stack: ["Next.js", "Supabase", "Tailwind"], url: "#" },
-    { title: "[Project 2] Internal dashboard", desc: "Pulled data from multiple sources into one clean schema.", impact: "e.g. 4 data sources → 1 source of truth", stack: ["React", "Node", "Postgres"], url: "#" },
-    { title: "[Project 3] Workflow automation", desc: "Third-party API integration that automated a manual process.", impact: "e.g. 20 hours/week saved", stack: ["Python", "REST APIs", "Cron"], url: "#" }
+    { title: "Global Chemical Management System", org: "Lear Corporation", desc: "Led the build on Palantir Foundry. Automated Safety Data Sheet approval workflows for EHS, gave every site worldwide access to chemical data, standardized annual inventory declarations, and added an AI agent for reporting.", impact: "$1.5M operational savings in year one", stack: ["Palantir Foundry", "AI agent", "Workflow automation", "Azure DevOps"], url: "" },
+    { title: "HUMAN Online Recruitment", org: "Mesh Networks", desc: "Customizable recruitment platform I led end-to-end: design, build, deployment, and maintenance. Part of the HUMAN HRIS suite, which cut manual data entry for HR.", impact: "Faster hiring, better recruiter-applicant communication", stack: ["ASP.NET Core", "C#", "SQL Server"], url: "" },
+    { title: "ERP, Accounting & Inventory", org: "N-PAX Cebu", desc: "Designed and built modules for high-scale ERP systems. Planned and ran UAT, and owned full-lifecycle support for multiple client systems.", impact: "Improved performance and stability across client systems", stack: ["C#", "WinForms", "SQL Server", "UAT"], url: "" },
+    { title: "NIMS & TRICOINS", org: "Mesh Networks", desc: "Two Android apps I led solo: a national microchip inventory system for veterinarians, and a distributed data-collection app for field agents.", impact: "More accurate tracking, faster multi-agent reporting", stack: ["Android", "Java", "SQL Server"], url: "" }
   ]
 };
 </script>
@@ -455,39 +472,41 @@ const SCENE = window.SCENE = {
 
 /* ---------- fill personal content ---------- */
 $$("[data-name]").forEach(e => e.textContent = CONFIG.name);
+$$("[data-fullname]").forEach(e => e.textContent = CONFIG.fullName);
+$("#track").innerHTML = CONFIG.track.map((t, i) => `<div class="reveal" style="--i:${i}"><b>${esc(t.n)}</b><span>${esc(t.l)}</span></div>`).join("");
 $$("[data-company]").forEach(e => e.textContent = CONFIG.company);
 $("#pitch").innerHTML = CONFIG.pitch; // author-controlled HTML
 $("#projects").innerHTML = CONFIG.projects.map((p, i) => `
   <article class="project reveal" style="--i:${i}">
-    <h3>${esc(p.title)}</h3><p style="color:var(--muted)">${esc(p.desc)}</p>
+    <span class="org">${esc(p.org || "")}</span><h3>${esc(p.title)}</h3><p style="color:var(--muted)">${esc(p.desc)}</p>
     <div class="impact">${esc(p.impact)}</div>
     <div class="chips">${p.stack.map(s => `<span class="chip">${esc(s)}</span>`).join("")}</div>
-    ${p.url && p.url !== "#" ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">View project ↗</a>` : ""}
+    ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">View project ↗</a>` : ""}
   </article>`).join("");
 $("#contactRow").innerHTML =
-  `<a class="btn primary" href="mailto:${esc(CONFIG.email)}">✉ ${esc(CONFIG.email)}</a>` +
-  CONFIG.links.map(l => `<a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("");
+  (CONFIG.email ? `<a class="btn primary" href="mailto:${esc(CONFIG.email)}">✉ ${esc(CONFIG.email)}</a>` : "") +
+  CONFIG.links.map((l, i) => `<a class="btn${!CONFIG.email && i === 0 ? " primary" : ""}" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("");
 
 /* ---------- flip cards ---------- */
 const CARDS = [
   { q: "Full-stack: front-end, backend, and data layers",
     joke: "I'm comfortable across all layers. Except the layer of dust on my gym membership.",
-    serious: ["Build UIs, APIs, and schemas myself", "Own the whole slice: button → endpoint → table", "Debug across the stack, not just “my part”"] },
+    serious: ["7+ years across ASP.NET Core, TypeScript, SQL Server, and Android", "Shipped web, desktop, and mobile, not just one layer", "Own the whole slice: UI → API → database"] },
   { q: "Claude Code as a force multiplier, not a crutch",
     joke: "I use Claude like a power drill. I still know where the walls are.",
-    serious: ["Daily Claude Code user: plan mode, CLAUDE.md, subagents", "I review every diff before it ships", "I write it by hand when that's faster"] },
+    serious: ["Shipped an AI reporting agent in a production system", "Taught a Generative AI workshop (2024)", "I review every diff. I taught QA, so I check everything"] },
   { q: "Skilled at “vibe coding”",
     joke: "Vibes: immaculate. Code: reviewed. Tests: actually exist.",
-    serious: ["Move fast with AI on boilerplate and drafts", "Slow down on auth, data, and money", "Clean commits a teammate can follow"] },
+    serious: ["Move fast with AI on boilerplate and drafts", "Slow down on auth, data, and anything compliance-related", "Hackathon champion: I know how to ship under a clock"] },
   { q: "Independently plan, build, test, and ship",
     joke: "I learned independence the day I learned what git push --force does. Once was enough.",
-    serious: ["Turn a vague ask into a scoped plan", "Make reasonable calls without waiting", "Flag blockers early, not on deadline day"] },
+    serious: ["Solo-led 4 client systems from design to maintenance", "Turn stakeholder needs into scoped, prioritized backlogs", "Flag blockers early, not on deadline day"] },
   { q: "Production-ready, not just working demos",
     joke: "My demos don't say “works on my machine.” They say “works on yours.”",
-    serious: ["Error handling and empty states included", "Tests on logic that matters", "Deployed, monitored, documented"] },
+    serious: ["Taught Software QA & Selenium automation at university", "Planned and ran UAT before every release at N-PAX", "Own CI/CD pipelines and monitoring in Azure DevOps"] },
   { q: "Comfortable with clients and fast feedback",
     joke: "Feedback at 4:59 PM? Fix at 5:30. Changelog at 5:31. Dinner at 5:32.",
-    serious: ["Explain technical tradeoffs in plain language", "Short loops: show, listen, adjust", "Proactive status updates"] }
+    serious: ["Led on-site client meetings to gather requirements and demo", "Wrote user manuals and SRS/FRD docs that cut support requests", "Explain tradeoffs in plain language"] }
 ];
 $("#cards").innerHTML = CARDS.map((c, i) => `
   <div class="card reveal" style="--i:${i}" tabindex="0" role="button" aria-label="Flip card: ${esc(c.q)}" data-cursor="flip">
